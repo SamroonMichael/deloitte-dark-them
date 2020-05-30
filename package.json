@@ -1,0 +1,16 @@
+{
+  "name": "deloitte-app",
+  "version": "1.0.0",
+  "description": "Deloitte FED assessment",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.1.0"
+  }
+}
