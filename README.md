@@ -2,11 +2,7 @@
 
 A light weight dark theme project
 
----
-
 ## Usage
-
----
 
 ### Installation
 
