@@ -3,14 +3,246 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- FavIcon -->
+    <link rel="shortcut icon" type="image/png" href="images/favicon.png" />
     <title>Deloitte Drak Layout Project</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <h1>Hello World!!</h1>
-    <h4>I am sub heading</h4>
+    <header>
+      <div class="header-wapper">
+        <div class="header-wapper__logo">
+          <img src="images/DD-logo.svg" alt="dd-logo" />
+        </div>
+        <div class="header-wapper__title">
+          <h3>Dark Layout</h3>
+        </div>
+      </div>
+    </header>
+    <!-- Header Ends here -->
+    <main>
+      <!-- Feature Section Starts here -->
+      <section>
+        <!-- Carousel Starts here -->
+        <div class="carousel-wapper">
+          <span class="chevron left prevBnt"></span>
+          <span class="chevron right nextBtn"></span>
+          <div class="slider">
+            <div class="carousel-slides1 slide">
+              <img src="images/slide1.jpg" />
+            </div>
+            <div class="carousel-slides2 slide">
+              <img src="images/slide2.jpg" />
+            </div>
+            <div class="carousel-slides3 slide">
+              <img src="images/slide3.jpg" />
+            </div>
+            <div class="carousel-slides4 slide">
+              <img src="images/slide4.jpg" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Feature Image Strats here -->
+        <div class="feature-content-wapper">
+          <h1>Dark Theme Layout</h1>
+          <h4>service offering <span>for</span> client name</h4>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+            hendrerit ullamcorper dui et congue. Vivamus dignissim nisi vel
+            mollis porta. Fusce vel ultricies purus. In consectetur nibh odio,
+            mattis varius purus faucibus in.
+          </p>
+          <button>Visit site</button>
+        </div>
+      </section>
+      <!-- Feature Section Ends here -->
+
+      <!-- Block Image Section Starts here -->
+      <section>
+        <div class="block-image-hero">
+          <!-- Modal ONE -->
+          <div class="modal-button" data-modal="modalOne">+</div>
+          <div id="modalOne" class="modal">
+            <div class="modal-content">
+              <span class="closeBtn">&times;</span>
+              <h2>Top Image Modal</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+                hendrerit ullamcorper dui et congue. Vivamus dignissim nisi vel
+                mollis porta. Fusce vel ultricies purus.
+              </p>
+            </div>
+          </div>
+          <img src="images/top-image.jpg" />
+          <h3>Blurb</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+            hendrerit ullamcorper dui et congue. Vivamus dignissim nisi vel
+            mollis porta.
+          </p>
+        </div>
+      </section>
+      <!-- Block Image Section Ends here -->
+
+      <!-- Block Image Grid Starts here -->
+      <div class="grid-wapper">
+        <div class="image-block-grid">
+          <!-- Modal TWO -->
+          <div class="modal-button" data-modal="modalTwo">+</div>
+          <div id="modalTwo" class="modal">
+            <div class="modal-content">
+              <span class="closeBtn">&times;</span>
+              <h2>Grid Hero Image Modal</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+                hendrerit ullamcorper dui et congue. Vivamus dignissim nisi vel
+                mollis porta. Fusce vel ultricies purus.
+              </p>
+            </div>
+          </div>
+          <img class="image-block-grid__one" src="images/slide1.jpg" />
+
+          <img class="image-block-grid__two" src="images/slide4.jpg" />
+          <!-- Modal Three -->
+          <div class="modal-button vLeftImage" data-modal="modalThree">+</div>
+          <div id="modalThree" class="modal">
+            <div class="modal-content">
+              <span class="closeBtn">&times;</span>
+              <h2>Grid Left Image Modal</h2>
+            </div>
+          </div>
+
+          <img class="image-block-grid__three" src="images/slide3.jpg" />
+          <!-- Modal Four -->
+          <div class="modal-button vRightImage" data-modal="modalFour">+</div>
+          <div id="modalFour" class="modal">
+            <div class="modal-content">
+              <span class="closeBtn">&times;</span>
+              <h2>Grid Right Image Modal</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Block Image Grid Ends here -->
+
+      <!-- Breakout Section Starts here -->
+      <section>
+        <div class="breakout-wapper">
+          <div class="breakout-content">
+            <h2>Breakout area</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+              hendrerit ullamcorper dui et congue. Vivamus dignissim nisi vel
+              mollis porta.
+            </p>
+          </div>
+          <img src="images/slide2.jpg" />
+        </div>
+      </section>
+      <!-- Breakout Section Ends here -->
+
+      <!-- More Layout Section Starts here -->
+      <section>
+        <div class="more-layout">
+          <h1>More layouts</h1>
+          <!-- Modal Five -->
+          <div class="modal-button" data-modal="modalFive">+</div>
+          <div id="modalFive" class="modal">
+            <div class="modal-content">
+              <span class="closeBtn">&times;</span>
+              <h2>Hero More Layout Image</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+                hendrerit ullamcorper dui et congue. Vivamus dignissim nisi vel
+                mollis porta. Fusce vel ultricies purus.
+              </p>
+            </div>
+          </div>
+          <img src="images/slide1.jpg" />
+          <h3>Blurb</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+            hendrerit ullamcorper dui et congue. Vivamus dignissim nisi vel
+            mollis porta.
+          </p>
+        </div>
+      </section>
+      <!-- More Layout Section Ends here -->
+
+      <!-- Images With Caption Starts here -->
+      <div class="image-caption-wapper">
+        <div class="hero-caption">
+          <h4>Image Caption</h4>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+            hendrerit ullamcorper
+          </p>
+        </div>
+
+        <div class="image-caption-wapper__hero">
+          <img src="images/top-image.jpg" />
+        </div>
+        <div class="image-caption-wapper__left">
+          <img src="images/slide3.jpg" />
+          <h4>Image Caption</h4>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+            hendrerit ullamcorper
+          </p>
+        </div>
+        <div class="image-caption-wapper__right">
+          <img src="images/slide4.jpg" />
+          <h4>Image Caption</h4>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+            hendrerit ullamcorper
+          </p>
+        </div>
+      </div>
+      <!-- Images With Caption Ends here -->
+    </main>
+
+    <footer>
+      <h1>More projects</h1>
+      <p>Lorem ipsum dolor sit amet</p>
+      <div class="project-wapper">
+        <div class="project">
+          <img src="images/slide4.jpg" />
+          <h3>Project name</h3>
+          <p>Lorem ipsum dolor sit amet</p>
+        </div>
+
+        <div class="project">
+          <img src="images/slide4.jpg" />
+          <h3>Project name</h3>
+          <p>Lorem ipsum dolor sit amet</p>
+        </div>
+
+        <div class="project">
+          <img src="images/slide4.jpg" />
+          <h3>Project name</h3>
+          <p>Lorem ipsum dolor sit amet</p>
+        </div>
+
+        <div class="project">
+          <img src="images/slide4.jpg" />
+          <h3>Project name</h3>
+          <p>Lorem ipsum dolor sit amet</p>
+        </div>
+
+        <div class="project">
+          <img src="images/slide4.jpg" />
+          <h3>Project name</h3>
+          <p>Lorem ipsum dolor sit amet</p>
+        </div>
+      </div>
+      <p class="credits">
+        (c) Deloitte digital | Developed by Samroon Michael 2020
+      </p>
+    </footer>
 
     <script src="js/main.js" async defer></script>
   </body>

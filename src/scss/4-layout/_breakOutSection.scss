@@ -1,0 +1,78 @@
+// Breakout section styles
+.breakout-wapper {
+  @include flexCenter;
+  background: $accent;
+  margin-top: 1rem;
+  color: $textColor;
+  padding: 1rem;
+
+  @include media-md {
+    display: flex;
+    flex-direction: row;
+  }
+  @include media-lg {
+    display: flex;
+    flex-direction: row;
+  }
+  @include media-xl {
+    width: 100vw;
+  }
+
+  img {
+    @include media-md {
+      width: 40%;
+      margin-left: auto;
+    }
+    @include media-lg {
+      width: 50%;
+      margin-left: auto;
+      order: 2;
+    }
+    @include media-xl {
+      width: 50%;
+      margin-left: auto;
+      order: 2;
+    }
+  }
+
+  .breakout-content {
+    @include media-md {
+      width: 40%;
+      margin-right: auto;
+    }
+    @include media-lg {
+      width: 50%;
+      margin-right: auto;
+      order: 2;
+    }
+    @include media-xl {
+      width: 50%;
+      margin-right: auto;
+      order: 2;
+    }
+  }
+
+  h2 {
+    color: #000;
+    padding-bottom: 0.7rem;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 10%;
+      padding: 0.5rem;
+      border-bottom: 1px solid #000;
+    }
+  }
+
+  p {
+    @include media-lg {
+      width: 70%;
+      line-height: 1.5;
+    }
+    @include media-xl {
+      width: 70%;
+      line-height: 1.5;
+    }
+  }
+}

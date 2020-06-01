@@ -1,0 +1,33 @@
+button {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 1.7rem;
+  outline: none;
+  border: 1px solid #fff;
+  cursor: pointer;
+  color: #fff;
+  font-size: 1.3rem;
+  padding: 1rem;
+  background-origin: border-box;
+  background-color: transparent;
+  background-size: 100% 200%;
+  background-image: linear-gradient(to bottom, transparent 50%, #2a2a2a 50%);
+  @include cubic-bezier;
+  transition: color, 0.3s;
+  @include media-md {
+    width: 20%;
+  }
+  @include media-lg {
+    width: 25%;
+  }
+  @include media-xl {
+    width: 30%;
+  }
+
+  &:hover {
+    background-color: #2e2e2e;
+    color: #fff;
+    transition: color, 0.3s;
+    background-position: 0 -100%;
+  }
+}

@@ -1,0 +1,40 @@
+// More Layout section styles
+.more-layout {
+  text-align: center;
+  padding: 1rem;
+  img {
+    display: block;
+    margin: 0 auto;
+    @include media-lg {
+      width: 90%;
+    }
+    @include media-xl {
+      width: 90%;
+    }
+  }
+
+  h1 {
+    padding: 0.5rem;
+  }
+
+  p {
+    padding: 1rem;
+    line-height: 1.5;
+    color: $textColor;
+    @include media-md {
+      font-size: 1rem;
+    }
+    @include media-lg {
+      display: block;
+      width: 70%;
+      margin: 0 auto;
+      font-size: 1.5rem;
+    }
+    @include media-xl {
+      display: block;
+      width: 50%;
+      margin: 0 auto;
+      font-size: 2rem;
+    }
+  }
+}

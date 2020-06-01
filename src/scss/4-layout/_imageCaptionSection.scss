@@ -1,0 +1,123 @@
+// Images with Caption styles
+.image-caption-wapper {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-auto-rows: minmax(100px, max-content);
+  grid-gap: 3px;
+  padding: 1rem;
+  @include media-lg {
+    width: 87%;
+    margin: 0 auto;
+  }
+
+  .hero-caption {
+    grid-column-start: 1;
+    grid-column-end: 4;
+
+    h4 {
+      font-size: 11pt;
+      &::before {
+        content: '';
+        display: block;
+        width: 20%;
+        padding: 0.5rem;
+        border-top: 1px solid #fff;
+      }
+      @include media-md {
+        font-size: 1.5rem;
+      }
+      @include media-lg {
+        font-size: 1.8rem;
+      }
+      @include media-xl {
+        font-size: 1.8rem;
+      }
+    }
+    p {
+      font-size: 9pt;
+      color: $textColor;
+      @include media-md {
+        font-size: 1rem;
+      }
+      @include media-lg {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  &__hero {
+    grid-column-start: 4;
+    grid-column-end: 13;
+    img {
+      display: block;
+      margin: 0 auto;
+    }
+
+    h4 {
+      padding-top: 0.5rem;
+
+      &::before {
+        content: '';
+        display: block;
+        width: 20%;
+        padding: 0.5rem;
+        border-top: 1px solid #fff;
+      }
+    }
+
+    p {
+      color: $textColor;
+      line-height: 1.5;
+      width: 15em;
+      font-size: 11pt;
+    }
+  }
+
+  &__left {
+    grid-column-start: 1;
+    grid-column-end: 7;
+
+    h4 {
+      &::before {
+        content: '';
+        display: block;
+        width: 20%;
+        padding: 0.5rem;
+        border-top: 1px solid #fff;
+      }
+    }
+
+    p {
+      color: $textColor;
+      line-height: 1.2;
+      font-size: 11pt;
+      @include media-lg {
+        width: 70%;
+      }
+    }
+  }
+
+  &__right {
+    grid-column-start: -7;
+    grid-column-end: 13;
+
+    h4 {
+      &::before {
+        content: '';
+        display: block;
+        width: 20%;
+        padding: 0.5rem;
+        border-top: 1px solid #fff;
+      }
+    }
+
+    p {
+      color: $textColor;
+      line-height: 1.2;
+      font-size: 11pt;
+      @include media-lg {
+        width: 70%;
+      }
+    }
+  }
+}

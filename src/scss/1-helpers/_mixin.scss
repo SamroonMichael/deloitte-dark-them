@@ -1,0 +1,34 @@
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column wrap;
+}
+
+@mixin transition-ease {
+  transition: all 0.5s ease-in-out;
+}
+
+@mixin cubic-bezier {
+  transition-timing-function: cubic-bezier(0.55, 0.085, 0.735, 0.055),
+    cubic-bezier(0.55, 0.085, 0.735, 0.055),
+    cubic-bezier(0.55, 0.085, 0.735, 0.055);
+}
+
+@mixin media-md {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin media-lg {
+  @media screen and (min-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin media-xl {
+  @media screen and (min-width: 1600px) {
+    @content;
+  }
+}

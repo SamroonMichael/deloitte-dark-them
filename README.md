@@ -6,7 +6,7 @@ A light weight dark theme project
 
 ### Installation
 
-Install the dependencies (gulp, gulp-sass, browser-sync)
+Install the dependencies (gulp, gulp-sass, browser-sync, gulp-autoprefixer, gulp-imagemin)
 
 ```bash
 $ npm install

@@ -1,6 +1,23 @@
-$body-bg: orange;
+// This is the single file output by sass. It is intended to ONLY @import other files
 
-body {
-  background: $body-bg;
-  color: #fff;
-}
+// 1 - HELPERS
+@import './1-helpers/variables';
+@import './1-helpers/mixin';
+
+// 2 - TOOLS
+@import './2-tools/normalize';
+
+// 3 - BASICS
+@import './3-basics/typography';
+@import './3-basics/base';
+@import './3-basics/button';
+@import './3-basics/modal';
+
+// 4 - LAYOUT
+@import './4-layout/header';
+@import './4-layout/featureSection';
+@import './4-layout/blockImageSection';
+@import './4-layout/breakOutSection';
+@import './4-layout/moreLayoutSection';
+@import './4-layout/imageCaptionSection';
+@import './4-layout/footer';

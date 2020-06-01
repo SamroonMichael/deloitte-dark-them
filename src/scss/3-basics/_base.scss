@@ -1,0 +1,71 @@
+html {
+  box-sizing: border-box;
+}
+* *::before *::after {
+  box-sizing: inherit;
+}
+
+body {
+  background: $primary;
+  color: #fff;
+  line-height: 1;
+  font-family: $font-body;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+}
+
+h1 {
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  font-weight: $font-bold;
+  @include media-md {
+    font-size: 3rem;
+    letter-spacing: 0.5rem;
+  }
+  @include media-lg {
+    font-size: 3.5rem;
+    letter-spacing: 1rem;
+  }
+  @include media-xl {
+    font-size: 5rem;
+    letter-spacing: 1.5rem;
+  }
+}
+
+h3 {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  font-size: 1.3rem;
+}
+
+h4 {
+  letter-spacing: 0.2rem;
+  font-weight: $font-bold;
+  @include media-md {
+    font-size: 1rem;
+  }
+  @include media-lg {
+    font-size: 1.5rem;
+  }
+  @include media-xl {
+    font-size: 2rem;
+  }
+}
+
+main {
+  @include flexCenter;
+  margin-top: 10px;
+}

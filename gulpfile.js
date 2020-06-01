@@ -12,15 +12,20 @@
 const gulp = require('gulp');
 const sass = require('gulp-sass');
 const browserSync = require('browser-sync').create();
+const autoprefixer = require('gulp-autoprefixer');
+const imagemin = require('gulp-imagemin');
+const uglifycss = require('gulp-uglifycss');
 
-// Logs Message
+const { series } = require('gulp');
+
+// Log Message
 async function message() {
   return console.log('Gulp is running...');
 }
 
 // Compile all HTML files into dist
 async function distHtml() {
-  return gulp.src('src/*.html').pipe(gulp.dest('dist'));
+  return gulp.src('src/*.html').pipe(gulp.dest('./dist'));
 }
 
 // Compile all SASS files into dist
@@ -29,15 +34,29 @@ async function distStyle() {
     gulp
       .src('src/scss/**/*.scss')
       .pipe(sass().on('error', sass.logError))
-      .pipe(gulp.dest('dist/css'))
+      .pipe(autoprefixer())
+      .pipe(
+        uglifycss({
+          uglyComments: true,
+        })
+      )
+      .pipe(gulp.dest('./dist/css'))
       // Stream css changes to all browsers
       .pipe(browserSync.stream())
   );
 }
 
-// Compil all JS files into dist
+// Compile all JS files into dist
 async function distJS() {
-  return gulp.src('src/js/**/*.js').pipe(gulp.dest('dist/js'));
+  return gulp.src('src/js/**/*.js').pipe(gulp.dest('./dist/js'));
+}
+
+// Compile all the Images into dist
+async function distImg() {
+  return gulp
+    .src('src/images/*')
+    .pipe(imagemin())
+    .pipe(gulp.dest('./dist/images'));
 }
 
 // Watch & Server
@@ -51,10 +70,14 @@ function watch() {
   gulp.watch('src/scss/**/*.scss', distStyle);
   gulp.watch('src/*.html', distHtml).on('change', browserSync.reload);
   gulp.watch('src/js/**/*.js', distJS).on('change', browserSync.reload);
+  gulp.watch('src/images/*', distImg).on('change', browserSync.reload);
 }
 
-exports.message = message;
-exports.distHtml = distHtml;
-exports.style = distStyle;
-exports.distJS = distJS;
-exports.watch = watch;
+exports.default = message;
+exports.default = distHtml;
+exports.default = distStyle;
+exports.default = distJS;
+exports.default = distImg;
+exports.default = watch;
+
+exports.default = series(message, distHtml, distStyle, distJS, distImg, watch);

@@ -1,0 +1,52 @@
+footer {
+  border-top: 1px solid $imagePanel;
+  padding: 1rem;
+  text-align: center;
+
+  h3 {
+    @include media-lg {
+      text-align: center;
+      font-size: 1rem;
+    }
+  }
+
+  p {
+    line-height: 1.5;
+    color: $textColor;
+
+    @include media-lg {
+      text-align: center;
+      font-size: 0.7rem;
+    }
+  }
+
+  .project-wapper {
+    display: flex;
+    flex-flow: column wrap;
+
+    @include media-lg {
+      flex-flow: row nowrap;
+    }
+    @include media-xl {
+      flex-flow: row nowrap;
+    }
+
+    .project {
+      img {
+        @include media-lg {
+          width: 90%;
+        }
+      }
+    }
+  }
+
+  .credits {
+    font-size: 1rem;
+    @include media-md {
+      font-size: 1.3rem;
+    }
+    @include media-lg {
+      font-size: 1rem;
+    }
+  }
+}
